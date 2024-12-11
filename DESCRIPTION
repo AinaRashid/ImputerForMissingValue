@@ -1,12 +1,13 @@
 Package: MissingValueImputer
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Functions for Handling Missing Values in Datasets
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("NURAINA", "INSYIRAH", , "insyirah.mrd43@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: The `MissingValueImputer` package provides tools for handling missing values in datasets. 
+    It includes functions to detect missing values, calculate medians for numeric variables, 
+    and replace missing values with median values, ensuring datasets are ready for analysis..
+License: MIT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2

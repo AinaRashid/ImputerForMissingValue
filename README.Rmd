@@ -1,0 +1,72 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# MissingValueImputer
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of MissingValueImputer is to provide tools to handle missing values in datasets efficiently. The package includes functions to detect missing values, calculate medians for numeric variables, and replace missing values with their respective medians.
+
+## Installation
+
+You can install the development version of MissingValueImputer from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("AinaRashid/MissingValueImputer")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(MissingValueImputer)
+## basic example code
+library(MissingValueImputer)
+
+# Load a sample dataset
+data(airquality)
+
+# Detect missing values
+missing_counts <- detect_missing_values(airquality)
+print(missing_counts)
+
+# Calculate the median for each numeric variable
+medians <- calculate_median(airquality)
+print(medians)
+
+# Replace missing values with medians
+cleaned_data <- replace_missing_with_median(airquality)
+head(cleaned_data)
+
+```
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
